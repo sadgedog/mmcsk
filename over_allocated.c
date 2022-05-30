@@ -6,6 +6,7 @@
 #define MAX_GB (100)
 
 // 意図的にメモリリークを起こしているので注意
+// 実行しないでください
 int main() {
   static char *ptrs[MAX_GB];
   int sum = 0;
