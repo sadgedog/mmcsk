@@ -1,7 +1,19 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdarg.h>
 
-int main(int argc, char **argv) { 
+void error(char *fmt, ...) {
+  va_list ap;
+  va_start(ap, fmt);
+  vfprintf(stderr, fmt, ap);
+  fprintf(stderr, "\n");
+  exit(1);
+}
+
+int main(int argc, char **argv) {
+  if (argc < 3)
+    error("invalid argument number");
+  
   int a, b;
   a = atoi(argv[1]);
   b = atoi(argv[2]);
