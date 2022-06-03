@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+// https://www.reddit.com/r/ProgrammerHumor/comments/jtnrlk/everyone_loves_pointers_right/
+
 #define ONE_GB (1024 * 1024 * 1024)
 #define PAGESIZE (4 * 1024)
 #define MAX_GB (100)
