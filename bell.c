@@ -5,5 +5,5 @@
 // 黎明期のPCでは物理のベルがなっていた
 int main(int argc, char **argv) {
   printf("\007");
-  exit(0);
+  return 0;
 }
