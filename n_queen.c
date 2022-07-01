@@ -5,10 +5,10 @@
 int N;
 
 void outq(int q[N]) {
-    for (int i = 0; i < N; i++) {
-      printf("%d ", q[i]);
-    }
-    printf("\n");
+  for (int i = 0; i < N; i++) {
+    printf("%d ", q[i]);
+  }
+  printf("\n");
 }
 
 void change(int board[N][N], int i, int j, int d) {
