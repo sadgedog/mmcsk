@@ -5,3 +5,5 @@ int main() {
 
 // C lang -> return 18 (confirm echo $?)
 // C++ -> return 19
+// CのautoはC++のautoと別物
+// 互換性のために残されているだけで実用的ではない
