@@ -34,18 +34,15 @@ extern "C" fn foo() ->i32 {
   let a = 42;
   a
 }
-// Cargo.toml
-// [lib]
-// crate-type = ["staticlib"]
 
-// cargo build -> liblib.a
+// rustc lib.rs --crate-type="staticlib" -> liblib.a
 
 // cpp側
 // main.cpp
 #include <bits/stdc++.h>
 using namespace std;
 
-int foo();
+extern "C" int foo();
 
 int main() {
   int a = foo();
@@ -53,5 +50,3 @@ int main() {
 }
 
 // g++ -o main main.cpp -L. -llib
-// no_mangleにしてるけどなぜかmangleされているっぽい
-// 後で調べる
