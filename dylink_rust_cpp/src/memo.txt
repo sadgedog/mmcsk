@@ -1,0 +1,15 @@
+cargo new XXX --lib
+
+Cargo.toml
+[lib]
+crate-type = ["cdylib"]
+
+cargo build
+
+clang++ -c XXX.cpp
+clang++ -o XXX.o libXXXX.dlib
+
+
+static linkでcppソースコードごと一気にリンクするやり方だと、
+rust側で再帰関数とか呼び出す実装になっているとなぜかクラッシュする(原因不明)
+なのでrust側でdylib作ってcpp側でリンクするのが一番良いかなぁ
